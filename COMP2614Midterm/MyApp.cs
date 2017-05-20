@@ -10,6 +10,21 @@ namespace COMP2614Midterm
 	{
 		static void Main(string[] args)
 		{
+			Run();
+		}
+
+		private static void Run()
+		{
+			var data = Helper.getData();
+			Helper.PrintResults(data);
+
+			data.Sort();
+			Console.WriteLine();
+			Console.WriteLine("After sort: ");
+			Console.WriteLine();
+			Helper.PrintResults(data);
+
+			Console.ReadLine();
 		}
 	}
 }
