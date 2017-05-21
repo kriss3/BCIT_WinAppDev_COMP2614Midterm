@@ -1,20 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace COMP2614Midterm
 {
+	/// <summary>
+	/// Krzysztof Szczurowski
+	/// Class representing GroceyItems; class implementing IComparable interface;
+	/// Repo Location: https://github.com/kriss3/BCIT_WinAppDev_COMP2614Midterm.git
+	/// </summary>
 	class GroceryItem : IComparable<GroceryItem>
 	{
-		public string Description { get; set; }
+		public string Description { get; private set; }
 		public decimal Price { get; set; }
-		public DateTime ExpirationDate { get; set; }
-
+		public DateTime ExpirationDate { get; private set; }
+		public GroceryItem(string description, decimal price, DateTime expiry)
+		{
+			Description = description;
+			Price = price;
+			ExpirationDate = expiry;
+		}
 		public int CompareTo(GroceryItem other)
 		{
-			return (int)this.Price - (int)other.Price;
+			return (int)other.Price - (int)this.Price;
 		}
 	}
 }
