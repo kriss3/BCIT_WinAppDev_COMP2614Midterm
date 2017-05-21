@@ -13,6 +13,7 @@ namespace COMP2614Midterm
 		static void Main(string[] args)
 		{
 			Run();
+			ReadLine();
 		}
 		private static void Run()
 		{
@@ -27,13 +28,11 @@ namespace COMP2614Midterm
 			{
 				ForegroundColor = ConsoleColor.Red;
 				WriteLine(dEx.Message);
-				ReadLine();
 			}
 			catch (Exception ex)
 			{
 				ForegroundColor = ConsoleColor.Red;
 				WriteLine(ex.Message);
-				ReadLine();
 			}
 
 			if (data == null)
