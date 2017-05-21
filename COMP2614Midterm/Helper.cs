@@ -23,7 +23,6 @@ namespace COMP2614Midterm
 		{
 			GroceryItemCollection gic = new GroceryItemCollection();
 			var sourceFile = GetSourceFile();
-			var myDateTime = DateTime.MaxValue;
 			using (StreamReader sr = new StreamReader(sourceFile))
 			{
 				while (sr.Peek() > 0)
